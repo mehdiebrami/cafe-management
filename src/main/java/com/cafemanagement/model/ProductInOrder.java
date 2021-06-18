@@ -14,12 +14,12 @@ public class ProductInOrder {
     private long id;
     private int amount;
     @ManyToOne
-    @JoinColumn(name = "orders_id")
+    @JoinColumn(name = "order_id")
     private Order order;
     @ManyToOne
-    @JoinColumn(name = "products_id")
+    @JoinColumn(name = "product_id")
     private Product product;
     @Enumerated(value = EnumType.STRING)
-    private ProductInOrderStatus productInOrderStatus;
+    private ProductInOrderStatus productInOrderStatus = ProductInOrderStatus.ACTIVE;
 
 }

@@ -16,6 +16,6 @@ public class Order {
     @Enumerated(value = EnumType.STRING)
     private OrderStatus orderStatus;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "tables_id")
+    @JoinColumn(name = "table_Id")
     private Table table;
  }

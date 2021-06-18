@@ -1,7 +1,6 @@
 package com.cafemanagement.service.impl;
 
 import com.cafemanagement.model.ProductInOrder;
-import com.cafemanagement.model.ProductInOrderStatus;
 import com.cafemanagement.repository.ProductInOrderRepository;
 import com.cafemanagement.service.ProductInOrderService;
 import org.springframework.stereotype.Service;
@@ -18,14 +17,8 @@ public class ProductInOrderServiceImpl implements ProductInOrderService {
 
 
     @Override
-    public void createProductInOrder(ProductInOrder product) {
-            product.setProductInOrderStatus(ProductInOrderStatus.ACTIVE);
-            productInOrderRepository.save(product);
-        }
-
-
-    @Override
-    public ProductInOrder editProductInOrder(ProductInOrder product) {
-        return null;
+    public void addProductInOrder(ProductInOrder product) {
+        productInOrderRepository.save(product);
     }
+
 }

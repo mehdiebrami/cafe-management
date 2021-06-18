@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface WaiterService {
 
-    void createWaiter(User user);
+    void addWaiter(User user);
 
-    List<User> getALl();
+    List<User> getList();
 
 }

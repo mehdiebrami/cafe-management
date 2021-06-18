@@ -15,7 +15,8 @@ public class UserServiceImpl implements UserService {
         this.userRepository = userRepository;
     }
 
-    public User getUser(String userName) {
+    @Override
+    public User getUserByUserName(String userName) {
         return userRepository.findByUsername(userName).orElseThrow(() -> new UsernameNotFoundException("user not found!"));
     }
 }

@@ -6,10 +6,10 @@ import java.util.List;
 
 public interface TableService {
 
-    void createTable(Table table);
+    void addTable(Table table);
 
     List<Table> getTablesByUserId(long id);
 
-    List<Table> getAllTables();
+    List<Table> getList();
 
 }

@@ -6,7 +6,9 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@javax.persistence.Table(name = "users")
+@javax.persistence.Table(name = "users",
+        indexes = {@Index(name = "username_index", columnList = "username", unique = true)
+        })
 public class User {
 
     @Id

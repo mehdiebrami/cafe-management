@@ -3,5 +3,3 @@ spring:
     url: jdbc:mysql://localhost:3306/cafe-management
     username: root
     password: Mina@1234
-  thymeleaf:
-    cache: false

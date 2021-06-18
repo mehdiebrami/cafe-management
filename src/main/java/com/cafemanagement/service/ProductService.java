@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface ProductService {
 
-    void createProduct(Product product);
+    void addProduct(Product product);
 
-    List<Product> getAll();
+    List<Product> getList();
 
 }

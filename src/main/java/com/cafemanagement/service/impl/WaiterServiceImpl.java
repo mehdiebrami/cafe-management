@@ -19,7 +19,7 @@ public class WaiterServiceImpl implements WaiterService {
     }
 
     @Override
-    public void createWaiter(User user) {
+    public void addWaiter(User user) {
         String encode = new BCryptPasswordEncoder().encode(user.getPassword());
         user.setPassword(encode);
         user.setUserType(UserType.WAITER);
@@ -27,8 +27,7 @@ public class WaiterServiceImpl implements WaiterService {
     }
 
     @Override
-    public List<User> getALl() {
-        List<User> userByUserType = userRepository.getUserByUserType(UserType.WAITER);
-        return userByUserType;
+    public List<User> getList() {
+        return userRepository.findUserByUserType(UserType.WAITER);
     }
 }

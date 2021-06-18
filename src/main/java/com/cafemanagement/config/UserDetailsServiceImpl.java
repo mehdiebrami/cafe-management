@@ -1,6 +1,6 @@
 package com.cafemanagement.config;
 
-import com.cafemanagement.model.CurrentUser;
+import com.cafemanagement.model.CafeManagementUserDetails;
 import com.cafemanagement.service.UserService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -18,6 +18,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return new CurrentUser(userService.getUser(username));
+        return new CafeManagementUserDetails(userService.getUserByUserName(username));
     }
 }

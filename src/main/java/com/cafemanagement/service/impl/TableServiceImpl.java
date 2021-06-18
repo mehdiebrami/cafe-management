@@ -17,7 +17,7 @@ public class TableServiceImpl implements TableService {
     }
 
     @Override
-    public void createTable(Table table) {
+    public void addTable(Table table) {
         tableRepository.save(table);
     }
 
@@ -27,7 +27,7 @@ public class TableServiceImpl implements TableService {
     }
 
     @Override
-    public List<Table> getAllTables() {
+    public List<Table> getList() {
         return tableRepository.findAll();
     }
 }

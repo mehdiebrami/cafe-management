@@ -8,8 +8,11 @@ import com.cafemanagement.service.TableService;
 import com.cafemanagement.service.WaiterService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping(value = "/manager")
@@ -26,20 +29,20 @@ public class ManagerController {
     }
 
     @PostMapping("/addProduct")
-    public String createProduct(Product product) {
-        productService.createProduct(product);
+    public String addProduct(Product product) {
+        productService.addProduct(product);
         return "redirect:/";
     }
 
     @PostMapping("/addTable")
-    public String createTable(Table table, Model model) {
-        tableService.createTable(table);
+    public String addTable(Table table) {
+        tableService.addTable(table);
         return "redirect:/";
     }
 
     @PostMapping("/addWaiter")
-    public String createWaiter(User user) {
-        waiterService.createWaiter(user);
+    public String addWaiter(@Valid User user, BindingResult result, Model model) {
+          waiterService.addWaiter(user);
         return "redirect:/";
     }
 

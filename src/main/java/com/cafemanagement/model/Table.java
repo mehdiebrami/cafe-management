@@ -15,7 +15,7 @@ public class Table {
     private int number;
     private int chairsCount;
     @ManyToOne
-    @JoinColumn(name = "waiters_id")
+    @JoinColumn(name = "user_id")
     private User user;
 
 }

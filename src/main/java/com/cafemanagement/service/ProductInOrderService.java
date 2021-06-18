@@ -4,8 +4,7 @@ import com.cafemanagement.model.ProductInOrder;
 
 public interface ProductInOrderService {
 
-    void createProductInOrder(ProductInOrder product);
+    void addProductInOrder(ProductInOrder product);
 
-    ProductInOrder editProductInOrder(ProductInOrder product);
 
 }
